@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AppHotel.Views.ContratacaoHospedagem"
+    Title="Contratar Hospedagem"
+    BackgroundColor="#F1F5F9">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="22" Spacing="16">
+
+            <Label
+                Text="HOTEL PREMIUM"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="#17365D"
+                HorizontalOptions="Center"/>
+
+            <Label
+                Text="Contratação de Hospedagem"
+                FontSize="20"
+                FontAttributes="Bold"
+                TextColor="#334155"
+                HorizontalOptions="Center"/>
+
+            <Border
+                BackgroundColor="White"
+                Stroke="#D8E1EC"
+                StrokeThickness="1"
+                Padding="18"
+                StrokeShape="RoundRectangle 16">
+
+                <VerticalStackLayout Spacing="13">
+
+                    <Label Text="Nome do hóspede"
+                           TextColor="#263449"
+                           FontAttributes="Bold"/>
+
+                    <Entry
+                        x:Name="NomeEntry"
+                        Placeholder="Digite seu nome"
+                        TextColor="#172033"
+                        PlaceholderColor="#8290A3"
+                        BackgroundColor="#F1F5F9"/>
+
+                    <Label Text="Quantidade de hóspedes"
+                           TextColor="#263449"
+                           FontAttributes="Bold"/>
+
+                    <Stepper
+                        x:Name="QuantidadeStepper"
+                        Minimum="1"
+                        Maximum="10"
+                        Value="1"
+                        BackgroundColor="#E8EEF6"
+                        ValueChanged="OnQuantidadeChanged"/>
+
+                    <Label
+                        x:Name="QuantidadeLabel"
+                        Text="1 hóspede"
+                        TextColor="#155EEF"
+                        FontSize="17"
+                        FontAttributes="Bold"/>
+
+                    <Label Text="Data de entrada"
+                           TextColor="#263449"
+                           FontAttributes="Bold"/>
+
+                    <DatePicker
+                        x:Name="DataEntradaPicker"
+                        TextColor="#172033"
+                        BackgroundColor="#F1F5F9"
+                        MinimumDate="2026-01-01"/>
+
+                    <Label Text="Tipo de acomodação"
+                           TextColor="#263449"
+                           FontAttributes="Bold"/>
+
+                    <Picker
+                        x:Name="AcomodacaoPicker"
+                        Title="Selecione uma acomodação"
+                        TextColor="#172033"
+                        TitleColor="#8290A3"
+                        BackgroundColor="#F1F5F9">
+
+                        <Picker.Items>
+                            <x:String>Quarto Standard</x:String>
+                            <x:String>Quarto Luxo</x:String>
+                            <x:String>Suíte Premium</x:String>
+                        </Picker.Items>
+                    </Picker>
+
+                    <Button
+                        Text="CONTRATAR HOSPEDAGEM"
+                        BackgroundColor="#155EEF"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HeightRequest="58"
+                        CornerRadius="12"
+                        Margin="0,12,0,0"
+                        Clicked="OnContratarClicked"/>
+
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

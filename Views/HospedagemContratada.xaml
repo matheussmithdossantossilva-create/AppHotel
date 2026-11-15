@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="AppHotel.Views.HospedagemContratada"
+    Title="Hospedagem Contratada"
+    BackgroundColor="#F1F5F9">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="22" Spacing="18">
+
+            <Label
+                Text="HOTEL PREMIUM"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="#17365D"
+                HorizontalOptions="Center"/>
+
+            <Label
+                Text="Reserva realizada!"
+                FontSize="23"
+                FontAttributes="Bold"
+                TextColor="#16803D"
+                HorizontalOptions="Center"/>
+
+            <Border
+                BackgroundColor="White"
+                Stroke="#D8E1EC"
+                StrokeThickness="1"
+                Padding="20"
+                StrokeShape="RoundRectangle 16">
+
+                <VerticalStackLayout Spacing="20">
+
+                    <Label
+                        Text="Detalhes da hospedagem"
+                        FontSize="19"
+                        FontAttributes="Bold"
+                        TextColor="#17365D"
+                        HorizontalOptions="Center"/>
+
+                    <Label
+                        x:Name="NomeLabel"
+                        Text="Hóspede:"
+                        FontSize="17"
+                        TextColor="#263449"/>
+
+                    <Label
+                        x:Name="QuantidadeLabel"
+                        Text="Quantidade:"
+                        FontSize="17"
+                        TextColor="#263449"/>
+
+                    <Label
+                        x:Name="DataLabel"
+                        Text="Data de entrada:"
+                        FontSize="17"
+                        TextColor="#263449"/>
+
+                    <Label
+                        x:Name="AcomodacaoLabel"
+                        Text="Acomodação:"
+                        FontSize="17"
+                        TextColor="#263449"/>
+
+                    <Button
+                        Text="VOLTAR"
+                        BackgroundColor="#155EEF"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        FontSize="16"
+                        HeightRequest="58"
+                        CornerRadius="12"
+                        Margin="0,12,0,0"
+                        Clicked="OnVoltarClicked"/>
+
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
